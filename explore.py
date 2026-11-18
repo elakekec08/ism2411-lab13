@@ -31,3 +31,16 @@ big_south = df[(df["region"] == "South") & (df["revenue"] > 1000)]
 print("\nExercise 4:")
 print(len(big_south))
 print(big_south.head())
+
+# --- Exercise 5 ---
+df["per_unit"] = df["revenue"] / df["quantity"]
+
+print("\nExercise 5:")
+print(df.head())
+print(df["per_unit"].mean())
+
+
+# --- Exercise 6 ---
+print("\nExercise 6:")
+print(df["region"].unique())
+print(df["region"].value_counts())
