@@ -17,3 +17,17 @@ south = df[df["region"] == "South"]
 print("\nExercise 2:")
 print(len(south))
 print(south.head())
+
+# --- Exercise 3 ---
+top_five = df.sort_values("revenue", ascending=False).head(5)
+
+print("\nExercise 3:")
+print(top_five)
+
+
+# --- Exercise 4 ---
+big_south = df[(df["region"] == "South") & (df["revenue"] > 1000)]
+
+print("\nExercise 4:")
+print(len(big_south))
+print(big_south.head())
