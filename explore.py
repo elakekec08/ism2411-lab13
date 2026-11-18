@@ -10,7 +10,6 @@ print(df.shape)
 print(df.columns.tolist())
 print(df.dtypes)
 
-
 # --- Exercise 2 ---
 south = df[df["region"] == "South"]
 
@@ -23,7 +22,6 @@ top_five = df.sort_values("revenue", ascending=False).head(5)
 
 print("\nExercise 3:")
 print(top_five)
-
 
 # --- Exercise 4 ---
 big_south = df[(df["region"] == "South") & (df["revenue"] > 1000)]
@@ -39,8 +37,19 @@ print("\nExercise 5:")
 print(df.head())
 print(df["per_unit"].mean())
 
-
 # --- Exercise 6 ---
 print("\nExercise 6:")
 print(df["region"].unique())
-print(df["region"].value_counts())
+print(df["region"].value_counts()) 
+
+# --- Exercise 7 ---
+selected = df[["region", "product", "revenue"]]
+
+print("\nExercise 7:")
+print(selected.shape)
+
+# --- Exercise 8 ---
+df.to_csv("data/explored.csv", index=False)
+
+print("\nExercise 8:")
+print("File saved successfully.")
